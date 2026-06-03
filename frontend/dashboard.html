@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <button onclick="window.location.href='analytics.html'">
+    Analytics Dashboard
+</button>
+<button onclick="logout()">Logout</button>
+
+<div class="card">
+    <h2>Your Subjects</h2>
+  <div id="subjects"></div>
+<button onclick="toggleSubjectForm()">
+    + Add Subject
+</button>
+
+<div id="subjectForm" style="display:none;">
+
+    <h3>Add Subject</h3>
+
+    <input
+        type="text"
+        id="subjectName"
+        placeholder="Enter Subject">
+
+    <button onclick="addSubject()">
+        Save Subject
+    </button>
+
+    <p id="subjectMsg"></p>
+
+</div>
+
+<hr>
+
+  <h3>Topics</h3>
+  <div id="topics"></div>
+
+<button
+    id="topicBtn"
+    onclick="toggleTopicForm()"
+    style="display:none;">
+    + Add Topic
+</button>
+
+<div id="topicForm" style="display:none;">
+
+    <h3>Add Topic</h3>
+
+    <input
+        type="text"
+        id="topicName"
+        placeholder="Enter Topic">
+
+    <button onclick="addTopic()">
+        Save Topic
+    </button>
+
+    <p id="topicMsg"></p>
+
+</div>
+
+<hr>
+
+  <h3>Flashcards</h3>
+  <div id="flashcards"></div>
+
+<button
+    id="flashcardBtn"
+    onclick="toggleFlashcardForm()"
+    style="display:none;">
+    + Add Flashcard
+</button>
+
+<div id="flashcardForm" style="display:none;">
+
+    <h3>Add Flashcard</h3>
+
+    <input
+        type="text"
+        id="question"
+        placeholder="Question">
+
+    <input
+        type="text"
+        id="answerText"
+        placeholder="Answer">
+
+    <button onclick="addFlashcard()">
+        Save Flashcard
+    </button>
+
+    <p id="flashcardMsg"></p>
+
+</div>
+
+<hr>
+
+
+
+  <button
+    id="quizBtn"
+    onclick="startQuiz()"
+    style="display:none;">
+    Start Quiz
+</button>
+</div>
+<button onclick="window.location.href='analytics.html'">
+    Analytics
+</button>
+
+<script src="dashboard.js"></script>
+
+</div>
+
+</body>
+</html>
